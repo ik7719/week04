@@ -1,4 +1,4 @@
-package com.homework.week04.Controller;
+package com.homework.week04.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class LoginController
 {
-
     @GetMapping("/login")
     public String loginPage()
     {
@@ -19,17 +18,15 @@ public class LoginController
     @PostMapping("/login")
     public String loginProcess
             (
-                     String id,
+                    @RequestParam String id,
                     @RequestParam String password,
                     Model model
-        )
-
+            )
     {
         if (id.equals(password))
         {
             model.addAttribute("loginId", id);
         }
-
         return "login-result";
     }
 }
