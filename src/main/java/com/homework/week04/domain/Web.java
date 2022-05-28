@@ -21,7 +21,7 @@ public class Web
 
     public boolean checkPassword(WebRequestDto webRequestDto)
     {
-        password.equals(WebRequestDto.getPassword());
+        password.equals(WebRequestDto.getPassword(webRequestDto));
         return true;
     }
 }

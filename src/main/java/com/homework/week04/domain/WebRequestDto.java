@@ -7,5 +7,5 @@ public class WebRequestDto
 {
     private String nickName;
     private String password;
-    private String checkPassword;
+    public String checkPassword;
 }
